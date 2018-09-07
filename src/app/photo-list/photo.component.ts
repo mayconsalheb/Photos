@@ -1,19 +1,12 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 @Component({
-    selector: 'photo-list',
+    selector: 'ap-photo',
     templateUrl: './photo.component.html'
 })
-export class PhotoListComponent implements OnInit{
+export class PhotoComponent{
     
-    title       : string;
-    path        : string;
-    description : string;
-    
-    ngOnInit(): void {
-        this.title = "Photo List";
-        this.path = "http://www.portaljava.com.br/wp-content/uploads/2017/11/java.jpg";
-        this.description = "Java Photo";
-    }
+    @Input() src     : "";
+    @Input() alt     : "";
 
 }
