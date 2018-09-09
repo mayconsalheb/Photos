@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PhotoModule } from './photo-list/photo.module';
+import { PhotoModule } from './photos/photo.module';
 
 @NgModule({
   declarations: [
