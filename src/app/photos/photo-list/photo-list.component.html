@@ -5,9 +5,9 @@
             type="search"
             placeholder="Search..."
             autofocus
-            (keyup)="filter = $event.target.value"
+            (keyup)="debounce.next($event.target.value)"
         >
     </form>
 </div>
-<h1 *ngIf="!photos.length">No Results</h1>
+
 <ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
