@@ -12,14 +12,10 @@ export class PhotoListComponent implements OnInit{
     filter: string = '';
     
     constructor(
-        private photoService: PhotoService, 
         private activatedRoute: ActivatedRoute
     ){}
     
     ngOnInit(): void {
-        this.photoService.listFromUser(this.activatedRoute.snapshot.params.username)
-        .subscribe(photos => {
-            this.photos = photos;    
-        },error=>console.log(error));
+        this.photos = this.activatedRoute.snapshot.data.photos; 
     }
 }

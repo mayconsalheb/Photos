@@ -9,4 +9,5 @@
         >
     </form>
 </div>
+<h1 *ngIf="!photos.length">No Results</h1>
 <ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
