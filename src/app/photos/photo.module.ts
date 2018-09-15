@@ -7,6 +7,7 @@ import { CommonModule } from "@angular/common";
 import { PhotoFormComponent } from './photo-form/photo-form.component';
 import { PhotosComponent } from './photo-list/photos/photos.component';
 import { FilterByDescription } from "./photo-list/filter-by-description.pipe";
+import { DarkenOnHoverModule } from "../shared/directives/darken-on-hover/darken-on-hover.module";
 
 @NgModule({
     declarations: [
@@ -19,7 +20,8 @@ import { FilterByDescription } from "./photo-list/filter-by-description.pipe";
     exports: [PhotoListComponent],
     imports: [
         HttpClientModule,
-        CommonModule
+        CommonModule,
+        DarkenOnHoverModule
     ]
 })
 export class PhotoModule {}
